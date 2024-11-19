@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DWARKA SECTOR 10 RESTRO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-size: 1.1rem;
+        /* Slightly larger font size */
+        font-family: "Arial", sans-serif;
+        /* Set font style */
+        position: relative;
+        /* Allow absolute positioning for the video */
+        overflow-x: hidden;
+        /* Prevent horizontal scrollbars */
+      }
+
+      .carousel-item {
+        position: relative;
+        /* Make the carousel item a positioned element */
+      }
+
+      .carousel-item video {
+        width: 100%;
+        height: 100vh;
+        /* Set video to full height */
+        object-fit: cover;
+        /* Maintain aspect ratio while covering */
+        position: absolute;
+        /* Positioning it behind other elements */
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* Place behind other content */
+      }
+
+      .text-overlay {
+        position: relative;
+        /* Positioning context for child elements */
+        color: white;
+        /* Text color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* Text shadow for readability */
+        z-index: 1;
+        /* Ensure it's on top of the video */
+        padding: 20px;
+        /* Padding around the text */
+        text-align: center;
+        /* Center text */
+      }
+
+      .customer-section {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .menu-section,
+      .special-offers-section {
+        padding: 20px;
+        border: 1px solid #ddd;
+        /* Similar border for uniformity */
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        /* Light background color */
+        margin: 20px 0;
+        /* Spacing between sections */
+      }
+
+      h1,
+      h3 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* Add shadow for brand style */
+      }
+
+      h1 {
+        font-size: 3rem;
+        /* Increase size for main heading */
+      }
+
+      h3 {
+        font-size: 2rem;
+        /* Increase size for subheading */
+      }
+
+      .compliments {
+        font-style: italic;
+        /* Make text italic */
+        color: #333;
+        /* Set text color */
+        text-align: center;
+        /* Center the compliments */
+        margin-top: 20px;
+        /* Space above the compliments section */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav style="background-color: #891ee0" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center gap-3">
+          <img src="./static/logo.png" style="height: 3rem" alt="logo" />
+          <a class="navbar-brand fw-bold text-white" href="#"
+            >DWARKA SECTOR 10 RESTRO</a
+          >
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#best-meal">Best Meals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./offer.html">Special Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">feedback</a>
+            </li>
+            <li class="nav-item">
+              <a id="cartBtn" class="nav-link" href="./cart/cart.html">Cart</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                See more
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="feedback.html">Feedback</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Veg Dishes</a></li>
+                <li><a class="dropdown-item" href="#">Non-veg Dishes</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Drinks and Beverages</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="userBtn" class="d-flex gap-2">
+          <a href="./auth/login.html" class="btn btn-primary">Login</a>
+          <a href="./auth/sign-up.html" class="btn btn-success">Sign Up</a>
+        </div>
+        <div
+          id="profileBtn"
+          class="d-flex justify-content-center align-items-center gap-3"
+        >
+          <a
+            class="btn btn-outline-dark d-flex justify-content-center align-items-center gap-1"
+            href="/my-profile.html"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-person-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              />
+            </svg>
+          </a>
+          <button
+            id="logoutBtn"
+            class="btn btn-outline-danger d-flex justify-content-center align-items-center gap-1 fw-semibold"
+          >
+            Logout
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-escape"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.538 1.02a.5.5 0 1 0-.076.998 6 6 0 1 1-6.445 6.444.5.5 0 0 0-.997.076A7 7 0 1 0 8.538 1.02"
+              />
+              <path
+                d="M7.096 7.828a.5.5 0 0 0 .707-.707L2.707 2.025h2.768a.5.5 0 1 0 0-1H1.5a.5.5 0 0 0-.5.5V5.5a.5.5 0 0 0 1 0V2.732z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Special Offers Carousel -->
+    <div
+      id="specialOffersCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="2000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <video class="d-block" autoplay muted loop>
+            <source src="./static/videos/restro34.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="text-overlay">
+            <h1 class="display-4 fw-bold">
+              🌟 Our Restro is the Best in Dwarka! 🌟
+            </h1>
+            <h3 class="lead fs-1">Serving you with excellence for 4 years!</h3>
+            <p>
+              Experience top-notch services and delectable dishes that keep our
+              customers coming back for more!
+            </p>
+            <a href="./menu.html" class="btn btn-danger btn-lg">Order Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <video class="d-block" autoplay muted loop>
+            <source
+              src="./static/videos/Doner Club Kebab B Roll Commercial Video Ad _ Signa Productions.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="text-overlay">
+            <h1 class="display-4 fw-bold">🌟 Discover Our Special Menu! 🌟</h1>
+            <h3 class="lead fs-1">Taste the Best of Indian Cuisine!</h3>
+            <p>
+              Indulge in our exclusive dishes crafted with love and tradition.
+            </p>
+            <a href="./menu.html" class="btn btn-danger btn-lg">Order Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <video class="d-block" autoplay muted loop>
+            <source
+              src="./static/videos/WhatsApp Video 2024-10-28 at 23.35.49.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="text-overlay">
+            <h1 class="display-4 fw-bold">
+              🌟 Celebrate Every Moment with Us! 🌟
+            </h1>
+            <h3 class="lead fs-1">Join Us for Unforgettable Experiences!</h3>
+            <p>From family dinners to special occasions, we have it all!</p>
+            <a href="./menu.html" class="btn btn-danger btn-lg">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#specialOffersCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#specialOffersCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div
+      id="best-meal"
+      class="container-fluid d-flex justify-content-center align-items-center flex-column gap-5 p-3"
+    >
+      <h2>Top Rated Dishes</h2>
+      <div
+        id="card-container"
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+      >
+        <!-- Dishes will be injected/added from the db -->
+      </div>
+    </div>
+
+    <div class="customer-section">
+      <h2>What Our Customers Say</h2>
+      <p class="compliments">
+        "Absolutely loved the ambiance and the food! A must-visit for anyone in
+        Dwarka!"
+      </p>
+      <p class="compliments">
+        "The best restaurant experience I've had in years. Highly recommend!"
+      </p>
+      <p class="compliments">
+        "Exceptional service and delightful dishes. I'll be back for sure!"
+      </p>
+    </div>
+
+    <footer
+      style="
+        background-color: #891ee0;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      "
+    >
+      <p>&copy; 2024 Dwarka Sector 10 Restro. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script src="./static/js/jsdwarka.js"></script>
+  </body>
+</html>
